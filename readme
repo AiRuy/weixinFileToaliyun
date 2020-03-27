@@ -5,3 +5,10 @@
 let imgExtensionArr = /\.[^\.]+$/.exec(filePath);
 let imgExtension = imgExtensionArr.length > 0 ? imgExtensionArr[0].substring(1) : "png";
 const aliyunFileKey = fileW + '' + util.createUuid() + '.' + imgExtension;
+
+
+阿里oss 上传失败原因参考文档：
+https://help.aliyun.com/document_detail/31988.html?spm=5176.product31815.6.875.5AzInj
+
+上传使用示例 说明文档：
+https://www.jianshu.com/p/34d6dcbdc2e5
