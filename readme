@@ -1,2 +1,7 @@
 微信小程序存放视频文件到阿里云指令以及用到的算法的js脚本文件
 上传步骤参考 http://www.jianshu.com/p/fb1b1f472573
+
+上传文件的扩展名获取，对应上传，如下代码
+let imgExtensionArr = /\.[^\.]+$/.exec(filePath);
+let imgExtension = imgExtensionArr.length > 0 ? imgExtensionArr[0].substring(1) : "png";
+const aliyunFileKey = fileW + '' + util.createUuid() + '.' + imgExtension;
